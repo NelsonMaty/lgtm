@@ -16,7 +16,7 @@ AI-powered code review CLI for React/TypeScript projects.
 
 ```bash
 # Clone
-git clone https://github.com/yourusername/lgtm.git
+git clone https://github.com/NelsonMaty/lgtm.git
 cd lgtm
 
 # Install globally
