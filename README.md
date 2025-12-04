@@ -1,0 +1,111 @@
+# lgtm
+
+AI-powered code review CLI for React/TypeScript projects.
+
+**LGTM?** Let's find out. 😏
+
+## Features
+
+- 🎯 **5 focused review steps** - Overview, Nomenclature, Logic & Bugs, Tests, UX & Production
+- ⚛️  **React/TypeScript best practices** - Community standards enforced
+- 💬 **Interactive Q&A** - Ask follow-up questions about findings
+- ✨ **Beautiful terminal UI** - Syntax-highlighted markdown output
+- ⚡ **Fast & affordable** - Powered by Gemini 2.0 Flash (~$0.001 per review)
+
+## Installation
+
+```bash
+# Clone
+git clone https://github.com/yourusername/lgtm.git
+cd lgtm
+
+# Install globally
+npm install -g .
+```
+
+## Usage
+
+```bash
+# From your feature branch
+cd /path/to/your/react-project
+lgtm --api-key your_gemini_key
+
+# Or with environment variable
+export GEMINI_API_KEY=your_key
+lgtm
+```
+
+Get your API key: https://aistudio.google.com/app/apikey
+
+## How It Works
+
+Type `lgtm` and watch the AI review your PR in 5 steps:
+
+1. **Overview** - What changed
+2. **Nomenclature** - Naming conventions (PascalCase, camelCase, TypeScript standards)
+3. **Logic & Bugs** - Type safety, React hooks, null checks, edge cases
+4. **Tests** - React Testing Library best practices, coverage analysis
+5. **UX & Production** - Accessibility, error handling, security, performance
+
+After each step:
+- Press **Enter** to continue
+- Press **a** to ask questions
+- Press **s** to skip next step
+- Press **q** to quit
+
+## React Best Practices
+
+Enforces community standards:
+
+- **Components**: PascalCase, descriptive names
+- **Hooks**: camelCase starting with "use"
+- **Props**: ComponentNameProps pattern
+- **Types**: No `I` prefix, proper inference
+- **Tests**: Behavior over implementation, React Testing Library patterns
+- **Accessibility**: Semantic HTML, ARIA, keyboard navigation
+- **Security**: XSS prevention, data exposure checks
+
+## Configuration
+
+Compares against `develop` branch by default. To change:
+
+Edit `src/git.js`:
+```javascript
+export function getMergeBase() {
+  return execGit('git merge-base HEAD main'); // or 'master'
+}
+```
+
+## Requirements
+
+- Node.js 18+
+- Git repository with `develop` branch
+- Gemini API key (free tier available)
+
+## Cost
+
+Gemini 2.0 Flash pricing (Dec 2024):
+- Input: $0.075 per 1M tokens  
+- Output: $0.30 per 1M tokens
+
+**Typical review**: ~$0.001 (essentially free)  
+**With Q&A**: ~$0.002  
+**Monthly for team of 10**: ~$0.40/month
+
+## Future Features
+
+- [ ] `--vibe` flag to adjust feedback tone (constructive, roast, zen, etc.)
+- [ ] GitHub Action integration
+- [ ] Multiple LLM support
+
+## License
+
+MIT
+
+## Contributing
+
+Issues and PRs welcome!
+
+---
+
+**Remember:** Just because you typed `lgtm` doesn't mean it actually looks good. 😉
