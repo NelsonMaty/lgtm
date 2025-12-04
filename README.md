@@ -65,38 +65,17 @@ Enforces community standards:
 - **Accessibility**: Semantic HTML, ARIA, keyboard navigation
 - **Security**: XSS prevention, data exposure checks
 
-## Configuration
-
-Compares against `develop` branch by default. To change:
-
-Edit `src/git.js`:
-```javascript
-export function getMergeBase() {
-  return execGit('git merge-base HEAD main'); // or 'master'
-}
-```
-
 ## Requirements
 
 - Node.js 18+
 - Git repository with `develop` branch
 - Gemini API key (free tier available)
 
-## Cost
-
-Gemini 2.0 Flash pricing (Dec 2024):
-- Input: $0.075 per 1M tokens  
-- Output: $0.30 per 1M tokens
-
-**Typical review**: ~$0.001 (essentially free)  
-**With Q&A**: ~$0.002  
-**Monthly for team of 10**: ~$0.40/month
-
 ## Future Features
-
-- [ ] `--vibe` flag to adjust feedback tone (constructive, roast, zen, etc.)
-- [ ] GitHub Action integration
 - [ ] Multiple LLM support
+- [ ] Azure devops integration
+- [ ] `--vibe` flag to adjust feedback tone (constructive, roast, zen, etc.)
+
 
 ## License
 
@@ -106,6 +85,3 @@ MIT
 
 Issues and PRs welcome!
 
----
-
-**Remember:** Just because you typed `lgtm` doesn't mean it actually looks good. 😉
