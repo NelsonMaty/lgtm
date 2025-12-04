@@ -4,7 +4,7 @@
  */
 
 const GEMINI_API_BASE = 'https://generativelanguage.googleapis.com/v1beta';
-const MODEL = 'gemini-2.5-pro';
+const MODEL = 'gemini-2.0-flash-exp';
 
 /**
  * Call Gemini API with a prompt
