@@ -14,6 +14,7 @@ export function buildPrompt(context, mergeBase, previousSteps = []) {
   sections.push('\n---\n');
   sections.push('# TASK: LOGIC & POTENTIAL BUGS\n');
   sections.push('Deep dive into correctness and code quality following React/TypeScript best practices:\n');
+  sections.push('**IMPORTANT**: Review the changed lines of code from the "Git Diff" (lines prefixed with `+` or `-`). Analyze them in the context of the surrounding code, but only flag issues *in the changes*.\n');
   
   sections.push('## TypeScript Type Safety');
   sections.push('- Are there `any` types that should be specific?');

@@ -14,6 +14,7 @@ export function buildPrompt(context, mergeBase, previousSteps = []) {
   sections.push('\n---\n');
   sections.push('# TASK: TEST ANALYSIS\n');
   sections.push('Evaluate test coverage and quality following React Testing Library best practices:\n');
+  sections.push('**IMPORTANT**: Analyze how the tests cover the specific changes introduced in the "Git Diff". Flag any gaps in testing related **directly** to the modified code.\n');
   
   sections.push('## React Testing Library Philosophy');
   sections.push('Tests should follow these principles:');

@@ -14,6 +14,7 @@ export function buildPrompt(context, mergeBase, previousSteps = []) {
   sections.push('\n---\n');
   sections.push('# TASK: NOMENCLATURE DEEP DIVE\n');
   sections.push('Focus exclusively on naming, conventions, and clarity following React/TypeScript best practices:\n');
+  sections.push('**IMPORTANT**: Review **only** the changed lines of code from the "Git Diff" (lines prefixed with `+`). Ignore unchanged lines.\n');
   
   sections.push('## File Names');
   sections.push('- React components: PascalCase (e.g., `UserProfile.tsx`, not `user-profile.tsx`)');

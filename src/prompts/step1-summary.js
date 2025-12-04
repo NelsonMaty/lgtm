@@ -13,6 +13,7 @@ export function buildPrompt(context, mergeBase) {
   sections.push('\n---\n');
   sections.push('# TASK: CODE OVERVIEW (NO REVIEW YET)\n');
   sections.push('Provide a purely descriptive overview of what changed. NO judgments or reviews yet.\n');
+  sections.push('Base your summary **only** on the changes shown in the "Git Diff" section (lines starting with `+` or `-`).\n');
   
   sections.push('## What Changed');
   sections.push('Describe in 2-3 paragraphs:');

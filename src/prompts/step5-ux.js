@@ -14,6 +14,7 @@ export function buildPrompt(context, mergeBase, previousSteps = []) {
   sections.push('\n---\n');
   sections.push('# TASK: UX & PRODUCTION READINESS\n');
   sections.push('Focus on user experience, accessibility, error handling, security, and production concerns:\n');
+  sections.push('**IMPORTANT**: Review the changed lines of code from the "Git Diff" (lines prefixed with `+` or `-`). Evaluate the impact of these specific changes on UX, security, and production readiness.\n');
   
   sections.push('## Accessibility (A11y)');
   sections.push('Critical for all users, including those with disabilities:');
